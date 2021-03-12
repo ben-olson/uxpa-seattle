@@ -171,7 +171,7 @@ strong,
 }
 
 .flow\:wide > * + * {
-  margin-top: var(--s3);
+  margin-top: 5rem;
 }
 
 .App {
