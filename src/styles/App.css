@@ -212,6 +212,10 @@ strong,
   height: 3ch;
 }
 
+.link {
+  text-decoration: none;
+}
+
 .link:hover {
   opacity: 50%;
   cursor: pointer;
@@ -258,6 +262,7 @@ strong,
 
 .intro, .contact {
   flex-wrap: wrap;
+  justify-content: center;
 }
 
 .intro article, .contact article {
@@ -319,9 +324,5 @@ strong,
   width: 100%;
   padding: 20px max(5vw, calc(50vw - 540px));
   justify-content: space-between;
-}
-
-.link {
-  text-decoration: none;
 }
 /*# sourceMappingURL=App.css.map */

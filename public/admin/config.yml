@@ -16,7 +16,9 @@ collections:
       - {label: "Date", name: "date", widget: "date"}
       - {label: "Location", name: "location", widget: "string"}
       - {label: "Thumbnail", name: "thumbnail", widget: "image"}
-      - {label: "Event Link", name: "link", widget: "string"}
+      - {label: "Event External Link", name: "link", widget: "string", required: "false"}
+      - {label: "Event Description", name: "markdown", widget: "markdown"}
+      - {label: "Event Excerpt", name: "excerpt", widget: "string", pattern: ['.{0,70}.', "No more than 70 characters."]}
   - name: "officer"
     label: "Officer"
     folder: "src/officers"
@@ -26,4 +28,4 @@ collections:
       - {label: "Name", name: "name", widget: "string"}
       - {label: "UXPA Position", name: "role", widget: "string"}
       - {label: "Current/Recent Job Title", name: "job", widget: "string"}
-      - {label: "Profile Picture", name: "avatar", widget: "image"}
+      - {label: "Profile Picture", name: "avatar", widget: "image", default: "/uploads/blank-avatar.png"}

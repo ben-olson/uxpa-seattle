@@ -46,6 +46,7 @@
 
 .intro, .contact {
   flex-wrap: wrap;
+  justify-content: center;
   & article {
     width: 45ch;
   }
@@ -99,8 +100,4 @@
   width: 100%;
   @include padding(20px max(5vw, calc(50vw - 540px)));
   justify-content: space-between;
-}
-
-.link {
-  text-decoration: none;
 }
