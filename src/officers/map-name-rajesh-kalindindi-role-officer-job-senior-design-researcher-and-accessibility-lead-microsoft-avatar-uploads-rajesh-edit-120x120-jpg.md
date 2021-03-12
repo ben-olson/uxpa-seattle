@@ -1,0 +1,6 @@
+---
+name: Rajesh Kalindindi
+role: Officer
+job: Senior Design Researcher and Accessibility Lead, Microsoft
+avatar: /uploads/rajesh-edit-120x120.jpg
+---
