@@ -1,7 +1,9 @@
 // This is single file output by SASS. Only inteded for @import partial files.
 
 // 1 - Helpers
+@import '1-helpers/functions';
 @import '1-helpers/variables';
+@import '1-helpers/mixins';
 
 // 2 - Plugins
 
@@ -11,13 +13,94 @@
 @import '3-basics/typography';
 
 // 4 - Composition
-@import '4-composition/containers';
+@import '4-composition/layout';
 @import '4-composition/main-app';
 
 // 5 - Blocks
 @import '5-blocks/buttons';
-@import '5-blocks/inputs';
-@import '5-blocks/messages';
+@import '5-blocks/links';
+@import '5-blocks/heading';
 
 // 6 - Pages
-@import '6-pages/header';
+@import '6-pages/home';
+
+.header, .footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height: 10ch;
+  & * {
+    display: flex;
+  }
+  & .logo img {
+    width: 1.5rem;
+    @include margin(-0.3rem 0 0.3rem 0);
+  }
+}
+
+
+.header {
+  @include margin(20px auto);
+}
+
+.intro, .contact {
+  flex-wrap: wrap;
+  & article {
+    width: 45ch;
+  }
+  & :first-child {
+    margin-right: 2rem;
+  }
+}
+
+.container {
+  @include border-radius(10px);
+  @include padding(1.5rem);
+  background-color: var(--gray);
+}
+
+.event {
+  @include border-radius(5px);
+  @include padding(1rem);
+  text-decoration: none;
+  background-color: var(--white);
+  border: 1px solid var(--black);
+  height: 100%;
+  &:hover {
+    box-shadow: 8px 6px 0px var(--blue);
+  }
+  &__img {
+    @include border-radius(5px);
+    @include margin(0 1rem 0 0);
+    width: 12rem;
+    height: 9rem;
+    background-color: var(--blue);
+  }
+  &__meta {
+    @include flex(true);
+    width: 60ch;
+    & > .source {
+      margin-top: auto;
+    }
+    & .description {
+      margin-bottom: 1rem;
+    }
+  }
+}
+
+.events__old .event__img {
+  width: 10rem;
+  height: 6.66rem;
+}
+
+.footer {
+  background-color: var(--gray);
+  width: 100%;
+  @include padding(20px max(5vw, calc(50vw - 540px)));
+  justify-content: space-between;
+}
+
+.link {
+  text-decoration: none;
+}

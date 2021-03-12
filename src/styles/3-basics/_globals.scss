@@ -1,8 +1,14 @@
 * {
-  font-family: 'Lato', Arial, Helvetica, sans-serif;
+  font-family: 'Poppins', Arial, sans-serif;
+  font-weight: 300;
   box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-  background: var(--cream);
-  transition: all 0.3s ease;
+  margin-top: 0;
+  margin-bottom: 0;
+  outline: none;
+  transition: 0.3s all ease;
+  color: var(--black);
+  background-color: none;
+  &::before, &::after {
+    box-sizing: inherit;
+  }
 }

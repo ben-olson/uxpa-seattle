@@ -3,10 +3,10 @@
   display: flex;
   flex-direction: column;
   margin: auto auto;
-  justify-content: space-between;
 }
 
 .App > * {
-  padding-left: 10vw;
-  padding-right: 10vw;
+  width: min(90vw, 1080px);
+  margin-left: auto;
+  margin-right: auto;
 }

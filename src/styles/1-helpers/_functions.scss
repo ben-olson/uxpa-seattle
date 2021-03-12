@@ -1,0 +1,7 @@
+@function min($l1, $l2) {
+  @return unquote("min(#{$l1}, #{$l2})");
+}
+
+@function max($l1, $l2) {
+  @return unquote("max(#{$l1}, #{$l2})");
+}

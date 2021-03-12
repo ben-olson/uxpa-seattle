@@ -1,0 +1,24 @@
+
+.flex {@include flex;}
+.flex\:column {@include flex(true);}
+
+.clip {
+  overflow: hidden;
+}
+
+.invert {
+  mix-blend-mode: exclusion !important;
+  filter: invert(1) !important;
+}
+
+.flow > * + * {
+  margin-top: var(--s0);
+}
+
+.flow\:tight > * + * {
+  margin-top: var(--s-3);
+}
+
+.flow\:wide > * + * {
+  margin-top: var(--s3);
+}

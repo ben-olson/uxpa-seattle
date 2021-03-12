@@ -1,0 +1,26 @@
+@mixin padding($values...) {    
+  @each $var in $values {
+      padding: #{$var};
+  }
+}
+
+@mixin margin($values...) {    
+  @each $var in $values {
+      margin: #{$var};
+  }
+}
+
+@mixin weight($weight) {
+  font-weight: $weight;
+}
+
+@mixin flex($column: false) {
+  display: flex;
+  @if ($column) {
+    flex-direction: column;
+  }
+}
+
+@mixin border-radius($radius) {
+  border-radius: $radius;
+}

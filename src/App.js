@@ -1,12 +1,13 @@
+import Home from './Home'
+import {BrowserRouter, Route, Switch } from 'react-router-dom';
 
-import './styles/App.css';
-
-function App() {
-  return (
-    <div className="App">
-      
-    </div>
-  );
+function Wrap() {
+  return <BrowserRouter>
+    <Switch>
+      <Route exact path='/' component={Home} />
+      <Route exact path='/about' component={Home} /> 
+    </Switch>
+  </BrowserRouter>
 }
 
-export default App;
+export default Wrap
