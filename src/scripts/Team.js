@@ -1,9 +1,5 @@
-import React, {useState} from 'react';
-
 
 function Team() {
-
-  // const officerArray = ['/static/media/allan-luik.md','../officers/briend-thompson.md','../officers/di-dang.md']
 
   const importAll = (r) => r.keys().map(r);
   const officers = importAll(require
@@ -15,7 +11,9 @@ function Team() {
     <article className="[ team ] [ flow:wide ]">
       <div className="[ container ] [ flex:column ] [ flow ]">
         <h2 className="[ heading ]">Meet the Team!</h2>
+        
         {officers.map((p,i) => {
+
           return (
 
           <section key={i} className="[ officer ] [ card ] [ flex ]">

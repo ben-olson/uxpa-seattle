@@ -292,6 +292,10 @@ strong,
   box-shadow: 8px 6px 0px var(--blue);
 }
 
+.event {
+  text-decoration: none;
+}
+
 .event__img {
   border-radius: 5px;
   margin: 0 1rem 0 0;

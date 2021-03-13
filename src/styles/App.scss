@@ -75,6 +75,7 @@
 
 
 .event {
+  text-decoration: none;
   &__img {
     @include border-radius(5px);
     @include margin(0 1rem 0 0);
