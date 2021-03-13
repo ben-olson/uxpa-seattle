@@ -81,7 +81,10 @@
     @include margin(0 1rem 0 0);
     width: 12rem;
     height: 9rem;
-    background-color: var(--blue);
+    background-color: var(--white);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
   }
   &__meta {
     @include flex(true);
@@ -101,14 +104,17 @@
     margin-right: 1rem;
     height: 8rem;
     width: 8rem;
+    background-color: var(--white);
     background-size: cover;
     background-repeat: no-repeat;
+    background-position: center;
   }
 }
 
 .events__old .event__img {
   width: 10rem;
   height: 6.66rem;
+
 }
 
 .footer {

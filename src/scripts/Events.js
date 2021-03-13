@@ -7,6 +7,9 @@ function Events() {
 
   events = events.map(event => {
     event.date = new Date(event.date);
+    if (event.thumbnail && event.thumbnail.startsWith('/uploads')) {
+      event.thumbnail = window.location.origin + event.thumbnail;
+    }
     return event;
   });
 
@@ -43,7 +46,7 @@ function Events() {
               <a key={i} className="[ event ]" {... e.link ? {href: e.link} : {}} rel="no-opener noreferrer" target="_blank">
 
                 <section className={`[ card ${e.link ? 'card__hover' : ''}  ] [ flex ]`}>
-                  <div style={{ backgroundImage:`url(${window.location.origin + e.thumbnail})` }}className="[ event__img ]"></div>
+                  <div style={{ backgroundImage:`url(${e.thumbnail})` }}className="[ event__img ]"></div>
                   <div className="[ event__meta ] [ flow:tight ]">
                     <h3 className="[ font-size:s1 ]">{e.title}</h3>
                     <p className="[ caps ]"><span className="[ date ]">{e.date.toDateString()}</span>&nbsp;&middot;&nbsp;<span className="[ location ]">{e.location}</span></p>
@@ -59,7 +62,7 @@ function Events() {
         )}
 
       </div>
-      <div className="[ events__old ][ container ] [ flex:column ]">
+      <div className="[ events__old ][ container ] [ flex:column ] [ flow ]">
         <h2 className="[ heading ]">Past Events</h2>
 
         {!eventsOld.length ? <p className="[ font-size:s-1 ]">No past events.</p> :
@@ -70,7 +73,7 @@ function Events() {
               <a key={i} className="[ event ]" {... e.link ? {href: e.link} : {}} rel="no-opener noreferrer" target="_blank">
 
                 <section className={`[ card ${e.link ? 'card__hover' : ''}  ] [ flex ]`}>
-                  <div style={{ backgroundImage:`url(${window.location.origin + e.thumbnail})` }}className="[ event__img ]"></div>
+                  <div style={{ backgroundImage:`url(${e.thumbnail})` }}className="[ event__img ]"></div>
                   <div className="[ event__meta ] [ flow:tight ]">
                     <h3 className="[ font-size:s1 ]">{e.title}</h3>
                     <p className="[ caps ]"><span className="[ date ]">{e.date.toDateString()}</span>&nbsp;&middot;&nbsp;<span className="[ location ]">{e.location}</span></p>
