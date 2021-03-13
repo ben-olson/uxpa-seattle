@@ -279,7 +279,7 @@ strong,
   background-color: var(--gray);
 }
 
-.event {
+.card {
   border-radius: 5px;
   padding: 1rem;
   text-decoration: none;
@@ -288,7 +288,7 @@ strong,
   height: 100%;
 }
 
-.event:hover {
+.card__hover:hover {
   box-shadow: 8px 6px 0px var(--blue);
 }
 
@@ -312,6 +312,15 @@ strong,
 
 .event__meta .description {
   margin-bottom: 1rem;
+}
+
+.officer__img {
+  border-radius: 5px;
+  margin-right: 1rem;
+  height: 8rem;
+  width: 8rem;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .events__old .event__img {

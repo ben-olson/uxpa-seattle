@@ -1,6 +1,0 @@
----
-name: Elly Searle
-role: Officer
-job: Senior UX Writer, Nordstrom
-avatar: /uploads/elly_edit_grey-120x120.jpg
----

@@ -61,16 +61,20 @@
   background-color: var(--gray);
 }
 
-.event {
+.card {
   @include border-radius(5px);
   @include padding(1rem);
   text-decoration: none;
   background-color: var(--white);
   border: 1px solid var(--black);
   height: 100%;
-  &:hover {
+  &__hover:hover {
     box-shadow: 8px 6px 0px var(--blue);
   }
+}
+
+
+.event {
   &__img {
     @include border-radius(5px);
     @include margin(0 1rem 0 0);
@@ -87,6 +91,17 @@
     & .description {
       margin-bottom: 1rem;
     }
+  }
+}
+
+.officer {
+  &__img {
+    @include border-radius(5px);
+    margin-right: 1rem;
+    height: 8rem;
+    width: 8rem;
+    background-size: cover;
+    background-repeat: no-repeat;
   }
 }
 
