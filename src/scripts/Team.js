@@ -16,26 +16,11 @@ function Team() {
     const posts = await Promise.all(markdownFiles
       .map((file) => fetch(file)
       .then((res) => {
+        res.json();
         console.log(res);
-        res.text();
       })))
       .catch((err) => console.error(err));
-    var officersSet = posts.map((file) => {
-      var result = file.substring(4, file.length - 5);
-      result = result.split('\n');
-      for (let i = 0; i < result.length; i++) {
-        var temparray = result[i].split(": ");
-        temparray[0] = '"' + temparray[0] + '"';
-        temparray[1] = '"' + temparray[1] + '"';
-        result[i] = temparray.join(":");
-      }
-      result = result.join();
-      result = "{" + result + "}";
-      var officersJSON = JSON.parse(result);
-      return officersJSON;
-    });
-    setOfficers(officersSet)
-    console.log(officers);
+    setOfficers(posts);
   }
 
   return (
