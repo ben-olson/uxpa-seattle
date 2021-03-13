@@ -1,20 +1,40 @@
 import React, {useState} from 'react';
-// import ReactMarkdown from 'react-markdown';
-// import officer from '../officers/allan-luik.md'
+
 
 function Team() {
-  const officerArray = ['../officers/allan-luik.md','../officers/briend-thompson.md','../officers/di-dang.md']
+
+  // const officerArray = ['/static/media/allan-luik.md','../officers/briend-thompson.md','../officers/di-dang.md']
+
   const importAll = (r) => r.keys().map(r);
-  // const markdownFiles = importAll(require.context('../officers', false, /\.md$/))
-  //   .sort()
-  //   .reverse();
+  const markdownFiles = importAll(require
+    .context('../officers', false, /\.md$/))
+    .map(file => file.default);
 
-  const [officers, setOfficers] = useState([]);
+  const [officers, setOfficers] = useState([{}]);
 
-  const parseOfficers = async() => {
-    const posts = await Promise.all(officerArray.map((file) => fetch(file).then((res) => res.text())))
+  async function getOfficers() {
+    const posts = await Promise.all(markdownFiles
+      .map((file) => fetch(file)
+      .then((res) => {
+        console.log(res);
+        res.text();
+      })))
       .catch((err) => console.error(err));
-    setOfficers(posts);
+    var officersSet = posts.map((file) => {
+      var result = file.substring(4, file.length - 5);
+      result = result.split('\n');
+      for (let i = 0; i < result.length; i++) {
+        var temparray = result[i].split(": ");
+        temparray[0] = '"' + temparray[0] + '"';
+        temparray[1] = '"' + temparray[1] + '"';
+        result[i] = temparray.join(":");
+      }
+      result = result.join();
+      result = "{" + result + "}";
+      var officersJSON = JSON.parse(result);
+      return officersJSON;
+    });
+    setOfficers(officersSet)
     console.log(officers);
   }
 
@@ -22,8 +42,22 @@ function Team() {
     <article className="[ team ] [ flow:wide ]">
       <div className="[ container ] [ flex:column ]">
         <h2 className="[ heading ]">Meet the Team!</h2>
-        <button onClick={parseOfficers}>Test Officers</button>
-        <div>{officers}</div>
+        <button onClick={getOfficers}>Click Me</button>
+        {officers.map((p,i) => {
+          return (
+            // <ReactMarkdown key={i} >{p}</ReactMarkdown>
+          <section key={i} className="[ officer ] [ flex ]">
+            <div className="[ event__img ]">
+            </div>
+            <div className="[ event__meta ] [ flow:tight ]">
+              <h3 className="[ font-size:s1 ]">{p}</h3>
+              <p className="[ caps ]"><span className="[ date ]">Nov. 14, 2020</span>&nbsp;&middot;&nbsp;<span className="[ location ]">Online Event</span></p>
+              <p className="[ description ] [ font-size:s-1 ]">This is an example description for an upcoming event. The text should span no more than two lines.</p>
+              <p className="[ source ][ font:bold font-size:s-1 ]">Created by Puget Sound World Usability Day</p>
+            </div>
+          </section>
+          )
+        })}
       </div>
     </article>
   )
