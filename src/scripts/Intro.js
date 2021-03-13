@@ -15,9 +15,11 @@ function Intro() {
           Below, you can find a list of upcoming events that are open to the public.
           </p>
           <br />
-          <button className="[ button ] [ font-size:s-1 font:bold ]">
-            Join the Facebook Group
-          </button>
+          <a href="https://www.facebook.com/groups/uxpaseattle/" rel="noopener noreferrer" target="_blank">
+            <button className="[ button ] [ font-size:s-1 font:bold ]">
+              Join the Facebook Group
+            </button>
+          </a>
         </article>
         <img src={intro} alt="UXPA Intro Graphic" />
       </div>

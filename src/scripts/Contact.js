@@ -13,9 +13,11 @@ function Contact() {
           Whether it be about membership, sponsorship, or our favorite ice cream flavors, we want to hear from you! We try our best to get back to people in a timely manner, so please be patient as we answer inquiries.
           </p>
           <br />
-          <button className="[ button ] [ font-size:s-1 font:bold ]">
-            Email Us Here
-          </button>
+          <a href="mailto:abc@uxpaseattle.org">
+            <button className="[ button ] [ font-size:s-1 font:bold ]">
+              Email Us Here
+            </button>
+          </a>
         </article>
     </div>
   )
