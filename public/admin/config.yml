@@ -14,16 +14,17 @@ collections:
     extension: "json"
     fields:
       - {label: "Title", name: "title", widget: "string"}
+      - {label: "Slug", name: "slug", widget: "string", pattern: ['^[a-z0-9]+(?:-[a-z0-9]+)*$', 'A slug can have no spaces, capital letters, or special characters'], hint: "The post URL (slug cannot have spaces, capital letters, or special characters)"}
       - {label: "Date", name: "date", widget: "datetime"}
       - {label: "Location", name: "location", widget: "string"}
       - {label: "Location Address", name: "address", widget: "string", required: false}
+      - {label: "Ticket Price", name: "price", widget: "string", default: "Free"}
       - {label: "Event Organizer", name: "organization", widget: "string", default: "UXPA Seattle"}
-      - {label: "Thumbnail", name: "thumbnail", widget: "image"}
-      - {label: "Event External Link", name: "link", widget: "string", required: false}
-      - {label: "External Link Display", name: "link-display", widget: "string", required: false, default: "Click to Learn More"}
       - {label: "Event Description", name: "markdown", widget: "markdown"}
       - {label: "Event Excerpt", name: "excerpt", widget: "string", pattern: ['.{0,70}.', "No more than 70 characters."]}
-      - {label: "Slug", name: "slug", widget: "string", pattern: ['^[a-z0-9]+(?:-[a-z0-9]+)*$', 'A slug can have no spaces, capital letters, or special characters'], hint: "The post URL (slug cannot have spaces, capital letters, or special characters)"}
+      - {label: "Thumbnail", name: "thumbnail", widget: "image", required: false}
+      - {label: "Event External Link", name: "link", widget: "string", required: false}
+      - {label: "External Link Display", name: "link-display", widget: "string", required: false, default: "Click to Learn More"}
   - name: "officer"
     label: "Officer"
     folder: "src/officers"
