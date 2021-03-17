@@ -2,7 +2,7 @@ import contact from '../static/contact.svg'
 
 function Contact() {
   return (
-    <div className="[ contact ] [ flex ]">
+    <div className="[ contact ] [ topic ] [ flex ]">
       <img src={contact} alt="Contact Us Graphic" />
       <article className="[ flow ]">
           <h2 class="[ caps ]">

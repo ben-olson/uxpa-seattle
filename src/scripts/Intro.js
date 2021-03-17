@@ -1,8 +1,9 @@
 import intro from '../static/intro.svg'
+import Button from './Button';
 
 function Intro() {
   return (
-    <div className="[ intro ] [ flex ]">
+    <div className="[ intro ] [ topic ] [ flex ]">
         <article className="[ flow ]">
           <h2 className="[ caps ]">
             <span className="[ heading ]">Welcome to</span><br />
@@ -15,11 +16,7 @@ function Intro() {
           Below, you can find a list of upcoming events that are open to the public.
           </p>
           <br />
-          <a href="https://www.facebook.com/groups/uxpaseattle/" rel="noopener noreferrer" target="_blank">
-            <button className="[ button ] [ font-size:s-1 font:bold ]">
-              Join the Facebook Group
-            </button>
-          </a>
+          <Button href = "/about" display = "Join our Facebook Group" newtab= {true} />
         </article>
         <img src={intro} alt="UXPA Intro Graphic" />
       </div>

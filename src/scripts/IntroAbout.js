@@ -2,7 +2,7 @@ import about from '../static/about.svg'
 
 function IntroAbout() {
   return (
-    <div className="[ intro ] [ flex ]">
+    <div className="[ intro ] [ topic ][ flex ]">
         <article className="[ flow ]">
           <h2 className="[ caps ]">
             <span className="[ heading ]">What is</span><br />

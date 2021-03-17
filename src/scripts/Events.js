@@ -51,6 +51,7 @@ function Events() {
                     <h3 className="[ font-size:s1 ]">{e.title}</h3>
                     <p className="[ caps ]"><span className="[ date ]">{e.date.toDateString()}</span>&nbsp;&middot;&nbsp;<span className="[ location ]">{e.location}</span></p>
                     <p className="[ description ] [ font-size:s-1 ]">{e.excerpt}</p>
+                    <br />
                     <p className="[ source ][ font:bold font-size:s-1 ]">Created by {e.organization}</p>
                   </div>
                 </section>
@@ -77,6 +78,7 @@ function Events() {
                   <div className="[ event__meta ] [ flow:tight ]">
                     <h3 className="[ font-size:s1 ]">{e.title}</h3>
                     <p className="[ caps ]"><span className="[ date ]">{e.date.toDateString()}</span>&nbsp;&middot;&nbsp;<span className="[ location ]">{e.location}</span></p>
+                    <br />
                     <p className="[ source ][ font:bold font-size:s-1 ]">Created by {e.organization}</p>
                   </div>
                 </section>
