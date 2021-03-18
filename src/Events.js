@@ -1,8 +1,8 @@
 import Header from './scripts/Header'
 import Footer from './scripts/Footer'
-import ReactMarkdown from 'react-markdown'
+// import ReactMarkdown from 'react-markdown'
 
-function Event(props) {
+function Events(props) {
   
   const eventSlug = props.match.params.event || '';
 
@@ -26,7 +26,7 @@ function Event(props) {
   return (
     <div id="#top" className="[ App ] [ flow:wide ]">
       <Header />
-      <EventInfo event = {event} />
+      <EventsAll event = {event} />
       <Footer />
     </div>
   )
@@ -45,12 +45,11 @@ function EventInfo(e) {
     <div className="[ event__description ] [ flow ]">
       <h3 className="[ font-size:s2 ]">{event.title}</h3>
       <p className="[ caps ]">{event.date.toDateString()}</p>
-      <p>{event.time}</p>
       <div className="[ address ] [ caps ]">
         <p>{event.location}</p>
         <p>{event.address}</p>
       </div>
-      <ReactMarkdown>{event.markdown}</ReactMarkdown>
+      <p className="[ description ] [ font-size:s-1 ]">{event.excerpt}</p>
       <br />
       <p className="[ source ][ font:bold font-size:s-1 ]">Created by {event.organization}</p>
     </div>

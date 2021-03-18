@@ -1,3 +1,6 @@
+import {Link} from 'react-router-dom'
+
+
 
 function Events() {
 
@@ -43,9 +46,9 @@ function Events() {
 
             return (
 
-              <a key={i} className="[ event ]" {... e.link ? {href: e.link} : {}} rel="no-opener noreferrer" target="_blank">
+              <Link to={'/events/' + e.slug} key={i} className="[ event ]">
 
-                <section className={`[ card ${e.link ? 'card__hover' : ''}  ] [ flex ]`}>
+                <section className={`[ card card__hover ] [ flex ]`}>
                   <div style={{ backgroundImage:`url(${e.thumbnail})` }}className="[ event__img ]"></div>
                   <div className="[ event__meta ] [ flow:tight ]">
                     <h3 className="[ font-size:s1 ]">{e.title}</h3>
@@ -56,7 +59,7 @@ function Events() {
                   </div>
                 </section>
 
-              </a>
+              </Link>
 
             )
           }
@@ -71,9 +74,9 @@ function Events() {
 
             return (
 
-              <a key={i} className="[ event ]" {... e.link ? {href: e.link} : {}} rel="no-opener noreferrer" target="_blank">
+              <Link to={'/events/' + e.slug} key={i} className="[ event ]">
 
-                <section className={`[ card ${e.link ? 'card__hover' : ''}  ] [ flex ]`}>
+                <section className="[ card card__hover ] [ flex ]">
                   <div style={{ backgroundImage:`url(${e.thumbnail})` }}className="[ event__img ]"></div>
                   <div className="[ event__meta ] [ flow:tight ]">
                     <h3 className="[ font-size:s1 ]">{e.title}</h3>
@@ -83,7 +86,7 @@ function Events() {
                   </div>
                 </section>
 
-              </a>
+              </Link>
 
             )
           }
