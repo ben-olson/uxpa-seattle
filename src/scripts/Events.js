@@ -18,19 +18,19 @@ function Events() {
 
   const currentDate = new Date();
 
-  const eventsNew = events.map(event => {
+  var eventsNew = events.map(event => {
     if (event.date >= currentDate) {
       return event;
     }
     return undefined;
-  }).filter(value => value !== undefined);
+  }).filter(value => value !== undefined).sort((a, b) => b.date - a.date);
 
-  const eventsOld = events.map(event => {
+  var eventsOld = events.map(event => {
     if (event.date < currentDate) {
       return event;
     }
     return undefined;
-  }).filter(value => value !== undefined);
+  }).filter(value => value !== undefined).sort((a, b) => b.date - a.date);
 
   console.log(eventsNew);
   console.log(eventsOld);

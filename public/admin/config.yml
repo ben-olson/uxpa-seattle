@@ -25,7 +25,7 @@ collections:
       - {label: "Event Excerpt", name: "excerpt", widget: "string", pattern: ['.{0,70}.', "No more than 70 characters."]}
       - {label: "Thumbnail", name: "thumbnail", widget: "image", required: false}
       - {label: "Event External Link", name: "link", widget: "string", required: false}
-      - {label: "External Link Display", name: "link-display", widget: "string", required: false, default: "Click to Learn More"}
+      - {label: "External Link Display", name: "linkdisplay", widget: "string", required: false, default: "Click to Learn More"}
   - name: "officer"
     label: "Officer"
     folder: "src/officers"

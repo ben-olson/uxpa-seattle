@@ -200,6 +200,10 @@ strong,
 }
 
 .flow\:wide > * + * {
+  margin-top: var(--s5);
+}
+
+.flow\:gap > * + * {
   margin-top: 5rem;
 }
 
@@ -333,7 +337,7 @@ strong,
 .event__img {
   border-radius: 5px;
   margin: 0 1rem 0 0;
-  background-color: var(--blue);
+  background-color: var(--white);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -352,6 +356,21 @@ strong,
 
 .event__meta .description {
   margin-bottom: 1rem;
+}
+
+.event__wrapper {
+  max-width: 60ch;
+  margin: 5rem auto;
+}
+
+.event__wrapper img {
+  width: 100%;
+  height: auto;
+}
+
+.border {
+  background-color: var(--black);
+  width: 1px;
 }
 
 .officer__img {

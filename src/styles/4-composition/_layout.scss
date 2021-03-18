@@ -20,5 +20,9 @@
 }
 
 .flow\:wide > * + * {
+  margin-top: var(--s5);
+}
+
+.flow\:gap > * + * {
   margin-top: 5rem;
 }

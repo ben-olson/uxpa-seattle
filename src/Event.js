@@ -1,6 +1,7 @@
 import Header from './scripts/Header'
 import Footer from './scripts/Footer'
 import ReactMarkdown from 'react-markdown'
+import Button from './scripts/Button'
 
 function Event(props) {
   
@@ -40,20 +41,41 @@ function EventInfo(e) {
   }
   console.log(event);
   return (
-  <div className="[ event ] [ container ]">
-    <div></div>
-    <div className="[ event__description ] [ flow ]">
-      <h3 className="[ font-size:s2 ]">{event.title}</h3>
-      <p className="[ caps ]">{event.date.toDateString()}</p>
-      <p>{event.time}</p>
-      <div className="[ address ] [ caps ]">
-        <p>{event.location}</p>
-        <p>{event.address}</p>
+  <div className="[ event ] [ flex:column flow:wide ]">
+    <h2 className="[ title ] [ card ] [ font-size:s4 bold ] ">{event.title}</h2>
+    <div className="[ event__container ] [ flex ]">
+      <div className="[ border ]"></div>
+      <div className="[ event__wrapper ] [ flex:column flow:wide ]">
+        {event.thumbnail && <img src={event.thumbnail} alt={event.excerpt} className="[ event__img ]" />}
+        <div className="[ event__overview ] [ flow ] [ container ]">
+          <section className="[ card ] [ flow:tight ]">
+            <h4 className="[ caps font:bold font-size:s-1 ]">Date &amp; time</h4>
+            <p>{event.date.toDateString()}</p>
+            <p>{event.time}</p>
+          </section>
+          <section className="[ card ] [ flow:tight ]">
+            <h4 className="[ caps font:bold font-size:s-1 ]">Location</h4>
+            <p>{event.location}</p>
+            <p>{event.address}</p>
+          </section>
+          <section className="[ card ] [ flow:tight ]">
+            <h4 className="[ caps font:bold font-size:s-1 ]">Organization(s)</h4>
+            <p>{event.organization}</p>
+          </section>
+          <section className="[ card ] [ flow:tight ]">
+            <h4 className="[ caps font:bold font-size:s-1 ]">Costs</h4>
+            <p>{event.price}</p>
+          </section>
+          {event.link && <br />}
+          {event.link && <Button href = {event.link} display = {event['link-display']} newtab= {true} />}
+        </div>
+        <div className="[ event__description event__meta ]">
+          <ReactMarkdown>{event.markdown}</ReactMarkdown>
+        </div>
       </div>
-      <ReactMarkdown>{event.markdown}</ReactMarkdown>
-      <br />
-      <p className="[ source ][ font:bold font-size:s-1 ]">Created by {event.organization}</p>
+      <div className="[ border ]"></div>
     </div>
+    
   </div>
   )
 }

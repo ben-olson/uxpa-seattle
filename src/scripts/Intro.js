@@ -16,7 +16,10 @@ function Intro() {
           Below, you can find a list of upcoming events that are open to the public.
           </p>
           <br />
-          <Button href = "/about" display = "Join our Facebook Group" newtab= {true} />
+          <Button href = "https://www.facebook.com/groups/uxpaseattle/" display = "Join our Facebook Group" newtab= {true} />
+          <br />
+          <br />
+          <Button href = "https://www.meetup.com/User-Experience-Professionals-Association-UXPA-Seattle/" display = "Follow our Meetup Page" newtab= {true} />
         </article>
         <img src={intro} alt="UXPA Intro Graphic" />
       </div>
