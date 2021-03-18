@@ -1,0 +1,14 @@
+.officer {
+  &__img {
+    @include border-radius(5px);
+    margin-right: 1rem;
+    background-color: var(--white);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  &__meta {
+    max-width: 60ch;
+    width: 100%;
+  }
+}

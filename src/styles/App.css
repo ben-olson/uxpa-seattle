@@ -239,6 +239,32 @@ strong,
   transform: translate(8px, 6px);
 }
 
+.card {
+  border-radius: 5px;
+  padding: 1rem;
+  text-decoration: none;
+  background-color: var(--white);
+  border: 1px solid var(--black);
+  height: 100%;
+}
+
+.card__hover:hover {
+  box-shadow: 8px 6px 0px var(--blue);
+}
+
+.container {
+  border-radius: 10px;
+  padding: 1.5rem;
+  background-color: var(--gray);
+}
+
+.heading {
+  text-transform: uppercase;
+  font-weight: 800;
+  font-size: 0.8rem;
+  height: 3ch;
+}
+
 .logo, .nav-item, .nav > *, .link {
   text-transform: uppercase;
   font-size: 0.8rem;
@@ -265,32 +291,18 @@ strong,
   margin-left: 1rem;
 }
 
-.heading {
-  text-transform: uppercase;
-  font-weight: 800;
-  font-size: 0.8rem;
-  height: 3ch;
+.officer__img {
+  border-radius: 5px;
+  margin-right: 1rem;
+  background-color: var(--white);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
-.header, .footer {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  height: 10ch;
-}
-
-.header *, .footer * {
-  display: flex;
-}
-
-.header .logo img, .footer .logo img {
-  width: 1.5rem;
-  margin: -0.3rem 0 0.3rem 0;
-}
-
-.header {
-  margin: 20px auto;
+.officer__meta {
+  max-width: 60ch;
+  width: 100%;
 }
 
 .topic img {
@@ -309,25 +321,6 @@ strong,
 
 .intro :first-child, .contact :first-child {
   margin-right: 2rem;
-}
-
-.container {
-  border-radius: 10px;
-  padding: 1.5rem;
-  background-color: var(--gray);
-}
-
-.card {
-  border-radius: 5px;
-  padding: 1rem;
-  text-decoration: none;
-  background-color: var(--white);
-  border: 1px solid var(--black);
-  height: 100%;
-}
-
-.card__hover:hover {
-  box-shadow: 8px 6px 0px var(--blue);
 }
 
 .event {
@@ -373,18 +366,25 @@ strong,
   width: 1px;
 }
 
-.officer__img {
-  border-radius: 5px;
-  margin-right: 1rem;
-  background-color: var(--white);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
+.header, .footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height: 10ch;
 }
 
-.officer__meta {
-  max-width: 60ch;
-  width: 100%;
+.header *, .footer * {
+  display: flex;
+}
+
+.header .logo img, .footer .logo img {
+  width: 1.5rem;
+  margin: -0.3rem 0 0.3rem 0;
+}
+
+.header {
+  margin: 20px auto;
 }
 
 .footer {

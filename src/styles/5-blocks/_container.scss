@@ -1,0 +1,5 @@
+.container {
+  @include border-radius(10px);
+  @include padding(1.5rem);
+  background-color: var(--gray);
+}

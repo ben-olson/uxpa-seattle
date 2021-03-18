@@ -1,0 +1,15 @@
+.topic img {
+  max-width: 100%;
+  @include margin(2rem 0);
+}
+
+.intro, .contact {
+  flex-wrap: wrap;
+  justify-content: center;
+  & article {
+    width: 45ch;
+  }
+  & :first-child {
+    margin-right: 2rem;
+  }
+}

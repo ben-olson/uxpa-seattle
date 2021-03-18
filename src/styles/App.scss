@@ -18,120 +18,14 @@
 
 // 5 - Blocks
 @import '5-blocks/buttons';
-@import '5-blocks/links';
+@import '5-blocks/card';
+@import '5-blocks/container';
 @import '5-blocks/heading';
+@import '5-blocks/links';
+@import '5-blocks/officer';
+@import '5-blocks/topic';
 
 // 6 - Pages
+@import '6-pages/events';
+@import '6-pages/header-footer';
 @import '6-pages/home';
-
-.header, .footer {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  height: 10ch;
-  & * {
-    display: flex;
-  }
-  & .logo img {
-    width: 1.5rem;
-    @include margin(-0.3rem 0 0.3rem 0);
-  }
-}
-
-.header {
-  @include margin(20px auto);
-}
-
-.topic img {
-  max-width: 100%;
-  @include margin(2rem 0);
-}
-
-.intro, .contact {
-  flex-wrap: wrap;
-  justify-content: center;
-  & article {
-    width: 45ch;
-  }
-  & :first-child {
-    margin-right: 2rem;
-  }
-}
-
-.container {
-  @include border-radius(10px);
-  @include padding(1.5rem);
-  background-color: var(--gray);
-}
-
-.card {
-  @include border-radius(5px);
-  @include padding(1rem);
-  text-decoration: none;
-  background-color: var(--white);
-  border: 1px solid var(--black);
-  height: 100%;
-  &__hover:hover {
-    box-shadow: 8px 6px 0px var(--blue);
-  }
-}
-
-.event {
-  text-decoration: none;
-  &__img {
-    @include border-radius(5px);
-    @include margin(0 1rem 0 0);
-    background-color: var(--white);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-  }
-  &__meta {
-    @include flex(true);
-    max-width: 60ch;
-    width: 100%;
-    & > .source {
-      margin-top: auto;
-    }
-    & .description {
-      margin-bottom: 1rem;
-    }
-  }
-}
-
-.event__wrapper {
-  max-width: 60ch;
-  @include margin(5rem auto);
-  & img {
-    width: 100%;
-    height: auto;
-  }
-}
-
-.border {
-  background-color: var(--black);
-  width: 1px;
-}
-
-.officer {
-  &__img {
-    @include border-radius(5px);
-    margin-right: 1rem;
-    background-color: var(--white);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-  }
-  &__meta {
-    max-width: 60ch;
-    width: 100%;
-  }
-}
-
-.footer {
-  background-color: var(--gray);
-  width: 100%;
-  @include padding(20px max(5vw, calc(50vw - 540px)));
-  justify-content: space-between;
-}

@@ -1,0 +1,25 @@
+.header, .footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height: 10ch;
+  & * {
+    display: flex;
+  }
+  & .logo img {
+    width: 1.5rem;
+    @include margin(-0.3rem 0 0.3rem 0);
+  }
+}
+
+.header {
+  @include margin(20px auto);
+}
+
+.footer {
+  background-color: var(--gray);
+  width: 100%;
+  @include padding(20px max(5vw, calc(50vw - 540px)));
+  justify-content: space-between;
+}
