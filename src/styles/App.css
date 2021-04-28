@@ -245,7 +245,6 @@ strong,
   text-decoration: none;
   background-color: var(--white);
   border: 1px solid var(--black);
-  height: 100%;
 }
 
 .card__hover:hover {
@@ -330,7 +329,7 @@ strong,
 .event__img {
   border-radius: 5px;
   margin: 0 1rem 0 0;
-  background-color: var(--white);
+  background-color: var(--blue);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -348,6 +347,10 @@ strong,
 }
 
 .event__meta .description {
+  margin-bottom: 1rem;
+}
+
+.event__meta > * + * {
   margin-bottom: 1rem;
 }
 
