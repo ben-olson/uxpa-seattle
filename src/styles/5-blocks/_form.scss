@@ -1,0 +1,20 @@
+form * {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  font-size: var(--s-1);
+  button {
+    width: max-content;
+  }
+  textarea {
+    height: 10rem;
+  }
+  input, textarea {
+    border: solid 1px black;
+    border-radius: 5px;
+    @include padding(0.25rem 0 0.25rem 0.5rem);
+    &:focus {
+      box-shadow: 8px 6px 0px var(--blue);
+    }
+  }
+}

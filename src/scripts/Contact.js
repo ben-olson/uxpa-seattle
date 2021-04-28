@@ -13,11 +13,23 @@ function Contact() {
           Whether it be about membership, sponsorship, or our favorite ice cream flavors, we want to hear from you! We try our best to get back to people in a timely manner, so please be patient as we answer inquiries.
           </p>
           <br />
-          <a href="mailto:abc@uxpaseattle.org">
-            <button className="[ button ] [ font-size:s-1 font:bold ]">
-              Email Us Here
-            </button>
-          </a>
+          <form name="contact" netlify class="[ flex:column flow ]">
+            <p>
+              <label>Name</label>
+              <input type="text" name="name" />
+            </p>
+            <p>
+              <label>Email</label>
+              <input type="email" name="email" />
+            </p>
+            <p>
+              <label>Message</label>
+              <textarea type="text" name="message" />
+            </p>
+            <p>
+              <button type="submit" className="[ button ] [ font-size:s-1 font:bold ]">Send Us Your Message!</button>
+            </p>
+          </form>
         </article>
     </div>
   )
