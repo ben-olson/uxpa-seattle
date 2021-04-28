@@ -3,7 +3,7 @@
   &__img {
     @include border-radius(5px);
     @include margin(0 1rem 0 0);
-    background-color: var(--blue);
+    background-color: white;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -25,7 +25,7 @@
 }
 
 .event__wrapper {
-  max-width: 60ch;
+  width: 60ch;
   @include margin(5rem auto);
   & img {
     width: 100%;

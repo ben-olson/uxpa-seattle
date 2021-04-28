@@ -329,7 +329,7 @@ strong,
 .event__img {
   border-radius: 5px;
   margin: 0 1rem 0 0;
-  background-color: var(--blue);
+  background-color: white;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -355,7 +355,7 @@ strong,
 }
 
 .event__wrapper {
-  max-width: 60ch;
+  width: 60ch;
   margin: 5rem auto;
 }
 
