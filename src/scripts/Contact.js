@@ -13,7 +13,7 @@ function Contact() {
           Whether it be about membership, sponsorship, or our favorite ice cream flavors, we want to hear from you! We try our best to get back to people in a timely manner, so please be patient as we answer inquiries.
           </p>
           <br />
-          <form name="contact" netlify class="[ flex:column flow ]">
+          <form name="contact" action="POST" netlify class="[ flex:column flow ]">
             <p>
               <label>Name</label>
               <input type="text" name="name" />
