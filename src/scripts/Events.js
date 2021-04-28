@@ -10,6 +10,7 @@ function Events() {
     event.date = new Date(event.date);
     if (event.thumbnail && event.thumbnail.startsWith('/uploads')) {
       event.thumbnail = window.location.origin + event.thumbnail;
+      console.log(event.thumbnail);
     }
     return event;
   });
