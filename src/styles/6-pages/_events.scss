@@ -3,7 +3,7 @@
   &__img {
     @include border-radius(5px);
     @include margin(0 1rem 0 0);
-    background-color: var(--white);
+    background-color: var(--blue);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
