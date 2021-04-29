@@ -17,15 +17,15 @@ function Contact() {
             <input type="hidden" name="form-name" value="contact" />
             <p>
               <label>Name</label>
-              <input type="text" name="name" id="name" />
+              <input type="text" name="name" id="name" required />
             </p>
             <p>
               <label>Email</label>
-              <input type="email" name="email" id="email" />
+              <input type="email" name="email" id="email" required />
             </p>
             <p>
               <label>Message</label>
-              <textarea type="text" name="message" id="message" />
+              <textarea type="text" name="message" id="message" required />
             </p>
             <p>
               <button type="submit" className="[ button ] [ font-size:s-1 font:bold ]">Send Us Your Message!</button>
