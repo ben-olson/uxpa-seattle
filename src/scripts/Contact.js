@@ -14,7 +14,6 @@ function Contact() {
           </p>
           <br />
           <form name="contact" method="post" data-netlify="true" data-netlify-honeypot="bot-field" class="[ flex:column flow ]">
-            <input type="hidden" name="bot-field" />
             <input type="hidden" name="form-name" value="contact" />
             <p>
               <label>Name</label>
